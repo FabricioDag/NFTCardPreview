@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, hsl(217, 54%, 11%),  hsl(215, 66%, 41%), hsl(217, 54%, 11%));
+    background-size: 400%;
+    background-position: left;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: bg 30s ease alternate-reverse infinite;
+}
+
+@keyframes bg {
+    from{
+        background-position: left;
+    }
+
+    to{
+        background-position: right;
+    }
+}
+
+.container{
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.wrapper{
+
+    border-radius: 15px;
+    margin: 2rem 1rem;
+    padding: 20px;
+    background-color: hsl(216, 50%, 16%);
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.img-top{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-top img{
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+}
+
+.img-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.205);
+    opacity: 0;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+.img-overlay img{
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-top:hover .img-overlay{
+    opacity: 1;
+}
+
+.text-area a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.text-area a:hover{
+    color:  hsl(178, 100%, 50%);
+}
+
+p{
+    color: hsl(215, 51%, 70%);
+}
+
+.market-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.price, .days-left{
+    display: flex;
+    align-items: center;
+}
+
+.price p{
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+    padding-left: 7px;
+}
+
+.days-left p{
+    padding-left: 7px;
+}
+
+hr{
+    border-color: hsl(215, 32%, 27%);
+}
+
+.creator-area{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.creator-area img{
+    height: 35px;
+    width: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.creator-area a{
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.creator-area a:hover{
+    color: hsl(178, 100%, 50%);
+}
